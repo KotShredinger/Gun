@@ -39,12 +39,15 @@ class ball():
             и стен по краям окна (размер окна 800х600).
         """
         self.x += self.vx
-        if self.x <= 0 and self.vx <=0:
-            self.vx = -0.5*self.vx
-        self.y -= self.vy
-        self.vy -= 3
-        if self.y <= 0 and self.vy >=0:
-            self.vy = -0.5*self.vy
+        self.y += self.vy
+        if self.x >= 800:
+            self.vx = -self.vx
+        if self.x <= 0:
+            self.vx = -self.vx
+        if self.y <= 0:
+            self.vy = -self.vy
+        if self.y >= 600:
+            self.vy = -self.vy
         self.set_coords()
 
 

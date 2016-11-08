@@ -8,14 +8,9 @@ class vector:
         return vector(self.x+other.x,self.y+other.y)
     def __sub__(self,other):
         return vector(self.x-other.x,self.y-other.y)
-    def __lt__(self,other):
-        return (self.x**2+self.y**2)<(other.x**2+other.y**2)
 N=int(input())
-s=[]
+s=[[0]*2 for i in range(N)]
 for i in range(N):
-    x1,y1=list(map(float,input().split(',')))
-    a=vector(x1,y1)
-    s.append(a)
-
+    s[i]= list(map(int, input().split()))
 maxn=max(s)
 print(maxn)

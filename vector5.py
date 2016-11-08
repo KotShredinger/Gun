@@ -20,11 +20,9 @@ for i in range(N):
 a=Vector(s[0][0], s[0][1])
 b=Vector(s[1][0], s[1][1])
 c=Vector(s[2][0], s[2][1])
-mod1=((a-b)*(a-b))**0.5
-mod2=((c-a)*(c-a))**0.5
-cos=((b-a)(c-a))/(mod1*mod2)
-sin=(1-cos**2)**0.5
-m=0.5*mod1*mod2*sin
+mod1=(abs((a-b)*(a-b)))**0.5
+mod2=(abs((c-a)*(c-a)))**0.5
+m=0.5*mod1*mod2*((1-(((b-a)(c-a))/(mod1*mod2))**2)**0.5)
 for i in range(N):
     for j in range(N):
         for k in range(N):
@@ -34,9 +32,7 @@ for i in range(N):
                 c=Vector(s[k][0], s[k][1])
                 mod1=((a-b)*(a-b))**0.5
                 mod2=((c-a)*(c-a))**0.5
-                cos=((b-a)(c-a))/(mod1*mod2)
-                sin=(1-cos**2)**0.5
-                S=0.5*mod1*mod2*sin
+                S=0.5*mod1*mod2*((1-(((b-a)(c-a))/(mod1*mod2))**2)**0.5)
                 if S>m:
                     m=S
 print(m)
