@@ -167,5 +167,4 @@ def new_game(event=''):
     root.after(750,new_game)
 
 new_game()
-
 mainloop()
