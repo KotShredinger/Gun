@@ -142,6 +142,8 @@ class target():
 
 t1 = target()
 t2 = target()
+
+
 screen1 = canv.create_text(400,300, text = '',font = '28')
 g1 = gun()
 bullet = 0
