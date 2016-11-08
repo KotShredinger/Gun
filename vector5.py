@@ -23,6 +23,6 @@ m=0
 for i in range(N):
     for j in range(N):
         for k in range(N):
-            if i.(j,k) > m:
+            if i.area(j,k) > m:
                 m = i.area(j,k)
 print(m)
