@@ -76,7 +76,7 @@ class gun():
         global balls, bullet
         bullet += 1
         new_ball = ball()
-        new_ball.r += 10
+        new_ball.r += 5
         self.an = math.atan((event.y-new_ball.y)/(event.x-new_ball.x))
         new_ball.vx = self.f2_power*math.cos(self.an)
         new_ball.vy = -self.f2_power*math.sin(self.an)
